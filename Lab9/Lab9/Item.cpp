@@ -1,6 +1,12 @@
-﻿#include "Item.h"
+﻿#include "stdafx.h"
+#include "Item.h"
 #include <iostream>
 
+Item::Item( int type, std::string title)
+{
+	_type = type;
+	_title = title;
+}
 
 Item::Item(int id, int type, std::string title, double price)
 {
@@ -12,5 +18,5 @@ Item::Item(int id, int type, std::string title, double price)
 
 void Item::PrintToConole() const
 {
-	std::cout << "Type: " << _type << " Title" << _title << std::endl;
+	std::cout << "Type: " << _type << " Title: " << _title << std::endl;
 }
