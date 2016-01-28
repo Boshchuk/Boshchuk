@@ -9,7 +9,11 @@ public:
 	std::string _title;
 	double _price;
 
+
+
+
 public:
+	Item( int type, std::string title);
 	Item(int id, int type, std::string title, double price);
 
 public:
