@@ -15,18 +15,42 @@ void PrintList(std::vector<Item> list)
 }
 
 int main() {
-	 
-	const int Sepatator = 10;
+	int Sepatator;
+	std::cout << "Input separator: ";
+	std::cin >> Sepatator;
 
-	std::vector<Item> allItemsList = std::vector<Item>();
+	
+
+	int typeIn;
+
+
+	auto allItemsList = std::vector<Item>();
 	//TODO Add different elements here
-	allItemsList.push_back(Item(5, "less 1"));
-	allItemsList.push_back(Item(4, "less 2"));
-	allItemsList.push_back(Item(3, "less 3"));
 
-	allItemsList.push_back(Item(15, "great 1"));
-	allItemsList.push_back(Item(14, "great 2"));
-	allItemsList.push_back(Item(13, "great 3"));
+	std::cout << "Input type (title predifined): ";
+	std::cin >> typeIn;
+
+	allItemsList.push_back(Item(typeIn, "less 1"));
+
+	std::cout << "Input type (title predifined): ";
+	std::cin >> typeIn;
+	allItemsList.push_back(Item(typeIn, "less 2"));
+
+	std::cout << "Input type (title predifined): ";
+	std::cin >> typeIn;
+	allItemsList.push_back(Item(typeIn, "less 3"));
+
+	std::cout << "Input type (title predifined): ";
+	std::cin >> typeIn;
+	allItemsList.push_back(Item(typeIn, "great 1"));
+
+	std::cout << "Input type (title predifined): ";
+	std::cin >> typeIn;
+	allItemsList.push_back(Item(typeIn, "great 2"));
+
+	std::cout << "Input type (title predifined): ";
+	std::cin >> typeIn;
+	allItemsList.push_back(Item(typeIn, "great 3"));
 	//
 
 
@@ -52,6 +76,7 @@ int main() {
 	std::cout << "Great group" << std::endl;
 
 	PrintList(greatGroup);
+	system("pause");
 
 	return 0;
 }
